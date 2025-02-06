@@ -1,0 +1,14 @@
+{
+  "name": "shuffle-simulation",
+  "version": "1.0.0",
+  "description": "Simulate different shuffle methods",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ./src"
+  },
+  "author": "Ivan Huz",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.40.0"
+  }
+}
