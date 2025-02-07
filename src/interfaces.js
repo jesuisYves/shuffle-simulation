@@ -44,11 +44,11 @@ const IBenchmark = [
   IDeck,
   {
     validate: (fn) => typeof fn === 'function',
-    errorMessage: '"shuffle" should be a function',
+    message: '"shuffle" should be a function',
   },
   {
     validate: (num) => Number.isInteger(num),
-    errorMessage: '"maxIterations" must be an integer',
+    message: '"maxIterations" must be an integer',
   },
 ];
 
