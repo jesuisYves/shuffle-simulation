@@ -7,11 +7,19 @@ const {
 } = require('./interfaces.js');
 const { validateArguments } = require('./validators.js');
 
+const findCardPosition = (deck, card) => {
+  const target = card.toString();
+  for (let i = 0; i < deck.length; i++) {
+    const current = deck[i].toString();
+    if (current === target) return i; 
+  }
+};
+
 const isSequence = (deckBefore, prevCard, currentCard) => {
   if (!prevCard || !currentCard) return false;
   const findPosition = (...cards) => findCardPosition(deckBefore, ...cards);
-  const i = deckBefore.indexOf(prevCard);
-  const j = deckBefore.indexOf(currentCard);
+  const i = findPosition(prevCard);
+  const j = findPosition(currentCard);
   const relativePosition = j - i;
   return relativePosition === 1;
 };
